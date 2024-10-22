@@ -1,4 +1,3 @@
-
 export default function Lista({lista}) {
 return(
     <>
