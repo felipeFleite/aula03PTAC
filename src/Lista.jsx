@@ -1,8 +1,9 @@
+import styles from "../src/styles/Lista.module.css"
 export default function Lista({lista}) {
 return(
     <>
     <h1>Lista de Produtos</h1>
-    <ul>
+    <ul className={styles.home}>
         {lista.map(produto => 
             <li key ={produto.id}>
             <h2>{produto.title}</h2>
