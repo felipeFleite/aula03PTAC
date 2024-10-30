@@ -3,3 +3,12 @@
     background-color: lightblue;
     font-family: 'Times New Roman', Times, serif;
 }
+.cards{
+    position: relative;
+    width: 200px;
+    background: #ffffff;
+    height: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

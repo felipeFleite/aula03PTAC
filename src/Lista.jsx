@@ -4,7 +4,7 @@ return(
     <>
     <div className={styles.home}>
     <h1>Lista de Produtos</h1>
-    <div className="cards">
+    <div className={styles.cards}>
     <ul>
         {lista.map(produto => 
             <li key ={produto.id}>
