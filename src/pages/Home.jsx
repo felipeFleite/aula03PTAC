@@ -15,9 +15,9 @@ useEffect(() => {
 }
 receberListaProdutos()
 }, [])
+
 return(
     <>
-    <h1>LISTA</h1>
     <Lista lista={lista} />
 </>
 )}
