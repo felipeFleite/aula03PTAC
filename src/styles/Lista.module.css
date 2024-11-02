@@ -21,9 +21,9 @@ body{
     max-width: 20%;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px rgb(158, 156, 156);
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-content: center;
     align-items: center;
