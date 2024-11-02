@@ -28,15 +28,9 @@ body{
     align-content: center;
     align-items: center;
 }
-.card p {
-    margin: 5px 0;
-    color: #333;
-}
 
 .card img {
     margin-top: 10px;
-    max-width: 100%;
-    border-radius: 5px;
 }
 
 .button {
