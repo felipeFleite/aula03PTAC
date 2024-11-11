@@ -1,6 +1,10 @@
 import styles from "../src/styles/Lista.module.css";
-
+import Loading from "./Loading";
 export default function Lista({ lista }) {
+
+    if(lista.length === 0){
+       return <div className={styles.load}> <Loading/> </div>
+    }
 
     return (
         <div className={styles.home}>
