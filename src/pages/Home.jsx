@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Lista from "../Lista"
+import styles from "../styles/Lista.module.css";
+
 export default function Home () {
     const [lista, setLista] = useState ([])
 
@@ -16,8 +18,44 @@ useEffect(() => {
 receberListaProdutos()
 }, [])
 
+const orderAZ = () => {
+    const listaOrdenada = [...lista].sort((a,b) => a.title.localeCompare(b.title))
+    setLista(listaOrdenada)
+}
+
+const orderZA = () => {
+    const listaOrdenada = [...lista].sort((a,b) => b.title.localeCompare(a.title))
+    setLista(listaOrdenada)
+}
+
+const menorMaior = () => {
+    const listaOrdenada = [...lista].sort((a,b) => a.price - b.price)
+    setLista(listaOrdenada)
+}
+
+const maiorMenor = () => {
+    const listaOrdenada = [...lista].sort((a,b) => b.price - a.price)
+    setLista(listaOrdenada)
+}
 return(
     <>
+
+    <button className={styles.buttonFiltro} onClick={() => orderAZ()}>
+        A-Z
+    </button>
+
+    <button className={styles.buttonFiltro} onClick={() => orderZA()}>
+        Z-A
+    </button>
+
+    <button className={styles.buttonFiltro} onClick={() => menorMaior()}>
+        Menor-Maior
+    </button>
+    
+    <button className={styles.buttonFiltro} onClick={() => maiorMenor()}>
+      Maior-Menor
+    </button>
+
     <Lista lista={lista} />
 </>
 )}
