@@ -9,9 +9,9 @@ body{
 }
 
 .load{
-    display: flex;
-    align-items: center;
-    justify-content: center
+    position: fixed;
+    top: 50%;
+    right: 50%;
 }
 
 .cards {
@@ -51,6 +51,31 @@ body{
     margin-top: auto;
 }
 
-.buttonFiltro{
-    
+.containerBotao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.buttonFiltro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.Title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  

@@ -4,7 +4,6 @@ import styles from "../styles/Lista.module.css";
 
 export default function Home () {
     const [lista, setLista] = useState ([])
-
 useEffect(() => {
     const receberListaProdutos = async () => {
     try{
@@ -37,8 +36,11 @@ const maiorMenor = () => {
     const listaOrdenada = [...lista].sort((a,b) => b.price - a.price)
     setLista(listaOrdenada)
 }
+
 return(
     <>
+    <h1 className={styles.Title} >Lista de Produtos</h1>
+    <div className={styles.containerBotao}>
 
     <button className={styles.buttonFiltro} onClick={() => orderAZ()}>
         A-Z
@@ -55,7 +57,7 @@ return(
     <button className={styles.buttonFiltro} onClick={() => maiorMenor()}>
       Maior-Menor
     </button>
-
+    </div>
     <Lista lista={lista} />
 </>
 )}

@@ -3,12 +3,15 @@ import Loading from "./Loading";
 export default function Lista({ lista }) {
 
     if(lista.length === 0){
-       return <div className={styles.load}> <Loading/> </div>
+        return(
+    <div className={styles.load}>
+        <Loading />
+    </div>
+        )
     }
 
     return (
         <div className={styles.home}>
-            <h1>Lista de Produtos</h1>
             <div className={styles.cards}>
                 {lista.map((produto) => (
                     <div key={produto.id} className={styles.card}>
