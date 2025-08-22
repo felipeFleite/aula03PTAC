@@ -1,15 +1,11 @@
 let findBig = () => {
-    let num1 = document.getElementById("1").value
-    let num2 = document.getElementById("1").value
-    let num3 = document.getElementById("1").value
-    
-    let arr = []
-    for(let i = 1; i <= 3; i++){
-        let numero = num1        
+let num1 = Number(document.getElementById("1").value)
+let num2 = Number(document.getElementById("2").value)
+let num3 = Number(document.getElementById("3").value)
 
-        let biggerNum = Math.max(num1,num2,num3)
-        
-        let resultado = parseFloat("O maior número é " + biggerNum)
-        document.getElementById("container").append(i+"X"+num1+"="+ resultado+ "\n")
-    }
+arr = [num1,num2,num3]
+
+arr.sort((a,b) => a-b)
+
+document.getElementById("maximo").innerHTML = arr[2]
 }
